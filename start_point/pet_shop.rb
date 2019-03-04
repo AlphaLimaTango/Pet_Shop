@@ -43,7 +43,7 @@ def pets_by_breed(hash, breed)
   pets = []
   for pet in hash[:pets]
     if pet[:breed] == breed
-      pets.push("")
+      pets.push(pet)
     end
   end
   return pets
@@ -96,17 +96,22 @@ def add_pet_to_stock(pet_shop, new_pet)
   return pet_shop[:pets] << new_pet
 end
 
-#14
+
 # def test_customer_cash
 #   cash = customer_cash(@customers[0])
 #   assert_equal(1000, cash)
 # end
-def customer_cash(customers_array)
-  for customer in customers_array
-    return customers_array[:cash]
-  end
-end
 
+# def customer_cash(customers_array)
+#   for customer in customers_array
+#     return customers_array[:cash]
+#   end
+# end
+
+#14
+def customer_cash(customer)
+  return customer[:cash]
+end
 
 #15
 def remove_customer_cash(customer, amount)
@@ -155,10 +160,10 @@ def customer_can_afford_pet(customer, new_pet_hash)
 end
 
 #20
-def sell_pet_to_customer(pet_shop_hash, pet, customer)
-      return customer[:pets] << pet
-      return customer_pet_count
-      return pets_sold
-      return customer_cash
-      return total_cash
-end
+# def sell_pet_to_customer(pet_shop_hash, pet, customer)
+#       p customer[:pets] << pet
+#       p customer_pet_count
+#       p pets_sold
+#       p customer_cash
+#       p total_cash
+# end
